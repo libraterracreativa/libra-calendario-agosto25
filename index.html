@@ -69,8 +69,8 @@
         
         .fade-in-scroll {
             opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease-out;
+            transform: translateY(20px);
+            transition: all 0.4s ease-out;
         }
         
         .fade-in-scroll.visible {
@@ -1570,6 +1570,49 @@
 
         </div>
         
+        <!-- ANTEPRIMA SETTEMBRE -->
+        <div class="section-divider fade-in-scroll">
+            <div class="section-title">Anteprima Settembre</div>
+            <div class="decorative-dots">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+            <div class="section-subtitle">Un assaggio del mese che verrà</div>
+        </div>
+
+        <div class="event-card special-event fade-in-scroll">
+            <div class="event-header">
+                <div class="date-display">
+                    <div class="date-number">20</div>
+                    <div class="date-day">Sab</div>
+                </div>
+                <div>
+                    <div class="event-title">❄️ Wim Hof Method - Workshop Fondamenti</div>
+                    <div class="instructor">con Andrea Bianchi (Istruttore WHM Certificato)</div>
+                </div>
+            </div>
+            <div class="event-meta">
+                <span class="meta-badge">9:30 - 15:30</span>
+                <span class="meta-badge">99€</span>
+                <span class="meta-badge">Max 30 partecipanti</span>
+            </div>
+            <div class="event-description">
+                Scopri il potere nascosto che vive dentro di te attraverso i 3 pilastri del Metodo Wim Hof: respirazione, esposizione al freddo e forza mentale. Andrea Bianchi, odontoiatra e istruttore WHM certificato, ti guiderà in un viaggio straordinario dove imparerai a controllare volontariamente il tuo sistema nervoso autonomo, a trasformare il freddo da nemico ad alleato e a liberare il tuo fuoco interiore. Dalla teoria alla pratica: sessioni di respirazione che ti porteranno in stati di coscienza profonda, yoga preparatorio e l'esperienza del bagno ghiacciato (facoltativo). Brunch vegano incluso per nutrire corpo e spirito. "Si può crescere solo uscendo dalla nostra area di comfort" - preparati a scoprire di cosa sei veramente capace.
+                <div class="optional-addon">Settembre 2025 - Porta: costume, accappatoio, tappetino yoga, mente aperta</div>
+            </div>
+            <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-top: 20px;">
+                <a href="https://www.wimhofmethod.com/activities/fundamentals-workshop-pietrasanta-andrea-bianchi/68148" target="_blank" class="book-button">
+                    🌐 Prenota Ufficiale WHM
+                </a>
+                <a href="https://wa.me/393491408666?text=Ciao! Vorrei informazioni sul Workshop Wim Hof del 20 settembre" class="book-button">
+                    📱 Info WhatsApp
+                </a>
+            </div>
+        </div>
+        
         <!-- SEZIONE STORIA LIBRA -->
         <div class="libra-story fade-in-scroll">
             <div class="story-content">
@@ -1697,7 +1740,7 @@
             
             elements.forEach(element => {
                 const elementTop = element.getBoundingClientRect().top;
-                const elementVisible = 150;
+                const elementVisible = 80;
                 
                 if (elementTop < window.innerHeight - elementVisible) {
                     element.classList.add('visible');
@@ -1724,7 +1767,7 @@
             const eventCards = document.querySelectorAll('.event-card');
             eventCards.forEach((card, index) => {
                 card.classList.add('fade-in-scroll');
-                card.style.transitionDelay = `${index * 0.1}s`;
+                card.style.transitionDelay = `${index * 0.05}s`;
             });
             
             // Add parallax class to backgrounds
