@@ -140,24 +140,150 @@
             text-transform: none;
             position: relative;
             z-index: 2;
-            transition: all 0.4s ease;
+            transition: all 0.3s ease;
             margin-bottom: -10px;
-            background: linear-gradient(45deg, var(--olive) 0%, var(--sage-dark) 50%, var(--olive) 100%);
-            background-size: 200% 200%;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            animation: title-shimmer 6s ease-in-out infinite;
+            text-shadow: 
+                0 2px 4px rgba(72, 71, 38, 0.2),
+                0 4px 8px rgba(72, 71, 38, 0.1),
+                0 8px 16px rgba(72, 71, 38, 0.05);
+            transform: translateZ(0);
+            animation: logo-float 6s infinite ease-in-out;
         }
         
         .logo-text:hover {
-            transform: scale(1.02);
-            animation-duration: 2s;
+            transform: scale(1.02) translateY(-2px) translateZ(0);
+            color: var(--sage-dark);
+            text-shadow: 
+                0 4px 8px rgba(72, 71, 38, 0.3),
+                0 8px 16px rgba(72, 71, 38, 0.15),
+                0 16px 32px rgba(72, 71, 38, 0.1);
         }
         
-        @keyframes title-shimmer {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
+        @keyframes logo-float {
+            0%, 100% { 
+                transform: translateY(0) translateZ(0);
+                text-shadow: 
+                    0 2px 4px rgba(72, 71, 38, 0.2),
+                    0 4px 8px rgba(72, 71, 38, 0.1),
+                    0 8px 16px rgba(72, 71, 38, 0.05);
+            }
+            50% { 
+                transform: translateY(-3px) translateZ(0);
+                text-shadow: 
+                    0 6px 12px rgba(72, 71, 38, 0.25),
+                    0 12px 24px rgba(72, 71, 38, 0.12),
+                    0 24px 48px rgba(72, 71, 38, 0.08);
+            }
+        }
+        
+        .section-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.2em;
+            font-weight: 500;
+            color: var(--olive);
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 2;
+            letter-spacing: 2px;
+            text-shadow: 
+                0 2px 4px rgba(72, 71, 38, 0.15),
+                0 4px 8px rgba(72, 71, 38, 0.1),
+                0 8px 16px rgba(72, 71, 38, 0.05);
+            transform: translateZ(0);
+            transition: all 0.4s ease;
+        }
+        
+        .section-title:hover {
+            transform: translateY(-2px) translateZ(0);
+            text-shadow: 
+                0 4px 8px rgba(72, 71, 38, 0.2),
+                0 8px 16px rgba(72, 71, 38, 0.12),
+                0 16px 32px rgba(72, 71, 38, 0.08);
+        }
+        
+        .subtitle {
+            font-size: 1.3em;
+            font-weight: 400;
+            color: var(--petrol);
+            position: relative;
+            z-index: 2;
+            letter-spacing: 1px;
+            text-shadow: 
+                0 1px 2px rgba(111, 104, 52, 0.15),
+                0 2px 4px rgba(111, 104, 52, 0.1);
+            transform: translateZ(0);
+            transition: all 0.3s ease;
+        }
+        
+        .subtitle:hover {
+            transform: translateY(-1px) translateZ(0);
+            text-shadow: 
+                0 2px 4px rgba(111, 104, 52, 0.2),
+                0 4px 8px rgba(111, 104, 52, 0.12);
+        }
+        
+        .story-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3em;
+            font-weight: 500;
+            margin-bottom: 20px;
+            letter-spacing: 3px;
+            color: var(--sand-light);
+            text-shadow: 
+                0 2px 4px rgba(0,0,0,0.3),
+                0 4px 8px rgba(0,0,0,0.2),
+                0 8px 16px rgba(0,0,0,0.1);
+            transform: translateZ(0);
+            transition: all 0.4s ease;
+            animation: story-float 7s infinite ease-in-out;
+        }
+        
+        .story-title:hover {
+            transform: translateY(-3px) translateZ(0);
+            text-shadow: 
+                0 4px 8px rgba(0,0,0,0.4),
+                0 8px 16px rgba(0,0,0,0.25),
+                0 16px 32px rgba(0,0,0,0.15);
+        }
+        
+        @keyframes story-float {
+            0%, 100% { 
+                transform: translateY(0) translateZ(0);
+                text-shadow: 
+                    0 2px 4px rgba(0,0,0,0.3),
+                    0 4px 8px rgba(0,0,0,0.2),
+                    0 8px 16px rgba(0,0,0,0.1);
+            }
+            50% { 
+                transform: translateY(-4px) translateZ(0);
+                text-shadow: 
+                    0 6px 12px rgba(0,0,0,0.35),
+                    0 12px 24px rgba(0,0,0,0.22),
+                    0 24px 48px rgba(0,0,0,0.12);
+            }
+        }
+        
+        .event-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.95em;
+            font-weight: 500;
+            color: var(--olive);
+            margin-bottom: 8px;
+            letter-spacing: 0.5px;
+            line-height: 1.3;
+            text-shadow: 
+                0 1px 2px rgba(72, 71, 38, 0.15),
+                0 2px 4px rgba(72, 71, 38, 0.1);
+            transform: translateZ(0);
+            transition: all 0.3s ease;
+        }
+        
+        .event-title:hover {
+            transform: translateY(-1px) translateZ(0);
+            text-shadow: 
+                0 2px 4px rgba(72, 71, 38, 0.2),
+                0 4px 8px rgba(72, 71, 38, 0.12),
+                0 8px 16px rgba(72, 71, 38, 0.06);
         }
         
         .logo-text {
@@ -218,18 +344,6 @@
             position: relative;
             z-index: 2;
             letter-spacing: 1px;
-            transition: all 0.4s ease;
-            background: linear-gradient(45deg, var(--petrol) 0%, var(--sage) 50%, var(--petrol) 100%);
-            background-size: 200% 200%;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            animation: subtitle-flow 5s ease-in-out infinite;
-        }
-        
-        @keyframes subtitle-flow {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
         }
         
         .content {
@@ -644,23 +758,6 @@
             position: relative;
             z-index: 2;
             letter-spacing: 2px;
-            transition: all 0.4s ease;
-            background: linear-gradient(45deg, var(--olive) 0%, var(--sage) 30%, var(--ochre) 70%, var(--olive) 100%);
-            background-size: 300% 300%;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            animation: section-glow 8s ease-in-out infinite;
-        }
-        
-        .section-title:hover {
-            transform: translateY(-2px);
-            animation-duration: 3s;
-        }
-        
-        @keyframes section-glow {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
         }
         
         .section-subtitle {
@@ -791,24 +888,6 @@
             letter-spacing: 3px;
             color: var(--sand-light);
             text-shadow: 0 2px 10px rgba(0,0,0,0.3);
-            position: relative;
-            transition: all 0.4s ease;
-            background: linear-gradient(45deg, var(--sand-light) 0%, var(--cream) 50%, var(--sand-light) 100%);
-            background-size: 200% 200%;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            animation: story-shine 7s ease-in-out infinite;
-        }
-        
-        .story-title:hover {
-            transform: scale(1.02);
-            animation-duration: 3s;
-        }
-        
-        @keyframes story-shine {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
         }
         
         .story-subtitle {
@@ -1162,6 +1241,14 @@
             .logo-text {
                 font-size: 4em;
                 letter-spacing: 3px;
+            }
+            
+            .section-title {
+                font-size: 1.8em;
+            }
+            
+            .story-title {
+                font-size: 2.2em;
             }
             
             .logo-text {
